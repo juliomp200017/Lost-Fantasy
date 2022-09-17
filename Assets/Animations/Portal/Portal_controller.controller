@@ -20,7 +20,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 0ca8a19e402709f40a8174a3ee208c3f, type: 2}
+  m_Motion: {fileID: 7400000, guid: 9c3d9db06a7224c45953079ef1f4dfad, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -55,7 +55,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Portal_controller
+  m_Name: Portal_Controller
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
