@@ -10,11 +10,15 @@ public class Player_Moves : MonoBehaviour
     private Animator _animator;
     private Rigidbody2D _rigidbody2D;
     private bool _grounded;
+    private CapsuleCollider2D _capsulecollider2D;
+    
+
     // Start is called before the first frame update
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        _capsulecollider2D = GetComponent<CapsuleCollider2D>();
     }
 
     // Update is called once per frame
@@ -29,6 +33,7 @@ public class Player_Moves : MonoBehaviour
         {
             transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
         }
+
 
         _animator.SetBool("running", _horizontal != 0.0f);
         Debug.DrawRay(transform.position, Vector3.down * 0.25f, Color.red);
@@ -46,6 +51,20 @@ public class Player_Moves : MonoBehaviour
         }
 
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+
+            Attack();
+            
+            
+
+        }
+
+        
+
+
+
+
     }
 
     private void jump()
@@ -53,8 +72,16 @@ public class Player_Moves : MonoBehaviour
         _rigidbody2D.AddForce(Vector2.up * jumpforce);
 
     }
+    private void Attack()
+    {
+        int random = Random.Range(1, 4);
+        _animator.SetTrigger("attack");
+        _animator.SetInteger("attacknum", random);
+    }
+
     private void FixedUpdate()
     {
+        
         _rigidbody2D.velocity = new Vector2(_horizontal * speed, _rigidbody2D.velocity.y);
 
     }
