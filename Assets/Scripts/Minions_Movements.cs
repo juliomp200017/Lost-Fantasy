@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Minions_Movements : StateMachineBehaviour
 {
-    public float attackrange = 3f;
-    public float speed = 2f;
+    public float attackrange = 1f;
+    public float speed = 1f;
+    public float distance = 4f;
     Transform player;
     Rigidbody2D _rigidbody2D;
     Boss1 Boss;
@@ -20,11 +21,16 @@ public class Minions_Movements : StateMachineBehaviour
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        Boss.LookAtPlayer();
-        Vector2 target = new Vector2(player.position.x, _rigidbody2D.position.y);
-        Vector2 newposition = Vector2.MoveTowards(_rigidbody2D.position, target, speed * Time.fixedDeltaTime);
-        _rigidbody2D.MovePosition(newposition);
+    {   
+        if(Vector2.Distance(player.position, _rigidbody2D.position) <= distance)
+        {
+            animator.SetBool("running", true);
+            Boss.LookAtPlayer();
+            Vector2 target = new Vector2(player.position.x, _rigidbody2D.position.y);
+            Vector2 newposition = Vector2.MoveTowards(_rigidbody2D.position, target, speed * Time.fixedDeltaTime);
+            _rigidbody2D.MovePosition(newposition);
+        }else animator.SetBool("running", false);
+
         if (Vector2.Distance(player.position, _rigidbody2D.position) <= attackrange)
         {
             animator.SetTrigger("attack");
