@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4030990142919425362}
   - component: {fileID: 4030990142919425366}
   - component: {fileID: 4030990142919425367}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boss3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3545205976614859554}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: attackpointm
   m_TagString: Untagged
   m_Icon: {fileID: 0}

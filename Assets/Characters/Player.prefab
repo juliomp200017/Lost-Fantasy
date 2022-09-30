@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1634154670389405911}
   - component: {fileID: 1634154670389405908}
   - component: {fileID: 2217671431638910993}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -166,7 +166,6 @@ MonoBehaviour:
     m_Bits: 64
   attackpower: 40
   attackrate: 2
-  maxhealth: 100
 --- !u!114 &2217671431638910993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,7 +189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6754539727488814537}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: attackpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

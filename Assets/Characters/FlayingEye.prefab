@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6319968187937254359}
   - component: {fileID: 6319968187937254358}
   - component: {fileID: 6319968187937254347}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FlayingEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,6 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  attackpointm: {fileID: 0}
   isFlipped: 1
 --- !u!95 &6319968187937254347
 Animator:
