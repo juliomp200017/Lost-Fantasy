@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Player_Moves : MonoBehaviour
 {
@@ -79,6 +80,8 @@ public class Player_Moves : MonoBehaviour
             return;
 
         Gizmos.DrawWireSphere(attackpoint.position, attackrange);
+        Console.WriteLine("attackpoint.position: "+attackpoint.position);
+        Console.WriteLine("attackrange: "+attackrange);
     }
 
     private void jump()
@@ -88,7 +91,7 @@ public class Player_Moves : MonoBehaviour
     }
     private void Attack()
     {
-        int random = Random.Range(1, 4);
+        int random = UnityEngine.Random.Range(1, 4);
         _animator.SetTrigger("attack");
         _animator.SetInteger("attacknum", random);
         Collider2D[] hitenemies = Physics2D.OverlapCircleAll(attackpoint.position, attackrange, enemylayer);
