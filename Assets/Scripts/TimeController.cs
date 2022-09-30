@@ -14,7 +14,7 @@ public class TimeController : MonoBehaviour
     private string SegPrefebsName = "Seg";
     private float acumulador;
     private bool activo;
-    private GameState gameState = GameState.star;
+    //private GameState gameState = GameState.star;
     // Start is called before the first frame update
     private void Awake()
     {
