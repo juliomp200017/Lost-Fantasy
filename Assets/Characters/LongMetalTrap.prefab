@@ -143,3 +143,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8667c6d3d40be9f4eb584d537ebb2770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackspace: 0.5
+  playerlayer:
+    serializedVersion: 2
+    m_Bits: 128
+  attackpower: 20
+  attackrange: 0.1
+  attackrate: 5

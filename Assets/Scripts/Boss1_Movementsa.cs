@@ -11,6 +11,12 @@ public class Boss1_Movementsa : StateMachineBehaviour
     Transform player;
     Rigidbody2D _rigidbody2D;
     Boss1 Boss;
+    private Transform attackpointm;
+    public float attackspace = 0.5f;
+    public LayerMask playerlayer;
+    public int attackpower = 20;
+    public float attackrate = 5.0f;
+    private float nextattacktime = 0f;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -18,6 +24,7 @@ public class Boss1_Movementsa : StateMachineBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         _rigidbody2D =  animator.GetComponent<Rigidbody2D>();
         Boss = animator.GetComponent<Boss1>();
+        attackpointm = animator.GetComponent<Boss1>().attackpointm;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -29,7 +36,18 @@ public class Boss1_Movementsa : StateMachineBehaviour
         _rigidbody2D.MovePosition(newposition);
         if(Vector2.Distance(player.position, _rigidbody2D.position) <= attackrange)
         {
-            animator.SetTrigger("attack");  
+            if (Time.time >= nextattacktime)
+            {
+
+                animator.SetTrigger("attack");
+                Collider2D[] hitenemies = Physics2D.OverlapCircleAll(attackpointm.position, attackrange, playerlayer);
+
+                foreach (Collider2D enemy in hitenemies)
+                {
+                    enemy.GetComponent<Enemy>().takedamage(attackpower);
+                }
+                nextattacktime = Time.time + 1f / attackrate;
+            }
         }
     }
 

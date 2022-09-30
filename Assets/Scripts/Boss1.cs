@@ -6,7 +6,7 @@ public class Boss1 : MonoBehaviour
 {
 
 	public Transform player;
-
+	public Transform attackpointm;
 	public bool isFlipped = false;
 
 	public void LookAtPlayer()

@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TakeHit_Boss1
+  m_Name: TakeHit_Boss3
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,7 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -389212217700751265, guid: 8bace978a21dc4e41be00168146dc1b6, type: 3}
+      value: {fileID: 8559509556701815258, guid: 07758eaa564002b41a135353ba904160, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -40,7 +40,7 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -389212217700751265, guid: 8bace978a21dc4e41be00168146dc1b6, type: 3}
+    - {fileID: 8559509556701815258, guid: 07758eaa564002b41a135353ba904160, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
