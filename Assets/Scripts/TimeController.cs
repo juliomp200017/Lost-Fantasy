@@ -10,15 +10,14 @@ public class TimeController : MonoBehaviour
     int min,seg;
     [SerializeField] Text tiempo;
 
-    private string MinPrefebsName = "Min";
-    private string SegPrefebsName = "Seg";
+    public string MinPrefebsName = "Min";
+    public string SegPrefebsName = "Seg";
     private float acumulador;
     private bool activo;
     //private GameState gameState = GameState.star;
     // Start is called before the first frame update
     private void Awake()
     {
-
         LoadData();
         acumulador = (min * 60) + seg;
         activo = true;
@@ -56,13 +55,14 @@ public class TimeController : MonoBehaviour
     {
         PlayerPrefs.SetInt(MinPrefebsName, minu);
         PlayerPrefs.SetInt(SegPrefebsName, segu);
+        PlayerPrefs.DeleteAll();
     }
 
     private void LoadData()
     {
+
         min = PlayerPrefs.GetInt(MinPrefebsName, 0);
         seg = PlayerPrefs.GetInt(SegPrefebsName, 0);
-        Console.WriteLine("min+seg: "+min + seg);
     }
 
     public enum GameState

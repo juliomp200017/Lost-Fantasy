@@ -4333,6 +4333,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tiempo: {fileID: 1869171711}
+  MinPrefebsName: 0
+  SegPrefebsName: 0
 --- !u!114 &1243479137
 MonoBehaviour:
   m_ObjectHideFlags: 0

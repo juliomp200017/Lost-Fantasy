@@ -667,6 +667,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tiempo: {fileID: 1067454467}
+  MinPrefebsName: Min
+  SegPrefebsName: Seg
 --- !u!1 &1339810223
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,6 +867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a36bdffd4664443bbb8bb91e14540b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: {fileID: 1067454469}
 --- !u!4 &1979806548
 Transform:
   m_ObjectHideFlags: 0
