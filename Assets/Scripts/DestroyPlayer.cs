@@ -7,7 +7,12 @@ public class DestroyPlayer : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(collision.gameObject);
-        SceneManager.LoadScene(2);
+        if (collision.gameObject.tag.Contains("Player"))
+        {
+            Destroy(collision.gameObject);
+            SceneManager.LoadScene(2);
+        }
+        
+        
     }
 }
