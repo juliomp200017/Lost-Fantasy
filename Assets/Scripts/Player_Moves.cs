@@ -10,7 +10,12 @@ public class Player_Moves : MonoBehaviour
     private Animator _animator;
     private Rigidbody2D _rigidbody2D;
     private bool _grounded;
-    private CapsuleCollider2D _capsulecollider2D;
+    public Transform attackpoint;
+    public float attackrange = 0.5f;
+    public LayerMask enemylayer;
+    public int attackpower = 40;
+    public float attackrate = 2.0f;
+    private float nextattacktime = 0f;
     
 
     // Start is called before the first frame update
@@ -18,7 +23,7 @@ public class Player_Moves : MonoBehaviour
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
-        _capsulecollider2D = GetComponent<CapsuleCollider2D>();
+       
     }
 
     // Update is called once per frame
@@ -48,23 +53,31 @@ public class Player_Moves : MonoBehaviour
         {
 
             jump();
+
         }
 
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
 
-            Attack();
-            
+            if(Time.time >= nextattacktime)
+            {
+                Attack();
+                nextattacktime = Time.time + 1f / attackrate;
+            }
             
 
+            
         }
 
         
+    }
+    private void OnDrawGizmosSelected()
+    {
+        if (attackpoint == null)
+            return;
 
-
-
-
+        Gizmos.DrawWireSphere(attackpoint.position, attackrange);
     }
 
     private void jump()
@@ -77,6 +90,13 @@ public class Player_Moves : MonoBehaviour
         int random = Random.Range(1, 4);
         _animator.SetTrigger("attack");
         _animator.SetInteger("attacknum", random);
+        Collider2D[] hitenemies = Physics2D.OverlapCircleAll(attackpoint.position, attackrange, enemylayer);
+
+        foreach (Collider2D enemy in hitenemies)
+        {
+            
+            enemy.GetComponent<Enemy>().takedamage(attackpower);
+        }
     }
 
     private void FixedUpdate()
