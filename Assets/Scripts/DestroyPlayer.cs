@@ -10,7 +10,7 @@ public class DestroyPlayer : MonoBehaviour
         if (collision.gameObject.tag.Contains("Player"))
         {
             Destroy(collision.gameObject);
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
         
         

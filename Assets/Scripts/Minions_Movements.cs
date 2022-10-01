@@ -48,7 +48,7 @@ public class Minions_Movements : StateMachineBehaviour
 
                 foreach (Collider2D enemy in hitenemies)
                 {
-                    enemy.GetComponent<Enemy>().takedamage(attackpower);
+                    enemy.GetComponent<PlayerDie>().takedamage(attackpower);
                 }
                 nextattacktime = Time.time + 1f / attackrate;
             }

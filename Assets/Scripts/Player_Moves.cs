@@ -80,8 +80,6 @@ public class Player_Moves : MonoBehaviour
             return;
 
         Gizmos.DrawWireSphere(attackpoint.position, attackrange);
-        Console.WriteLine("attackpoint.position: "+attackpoint.position);
-        Console.WriteLine("attackrange: "+attackrange);
     }
 
     private void jump()

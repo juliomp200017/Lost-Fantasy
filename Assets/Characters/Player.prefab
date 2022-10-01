@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1634154670389405910}
   - component: {fileID: 1634154670389405911}
   - component: {fileID: 1634154670389405908}
-  - component: {fileID: 2217671431638910993}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -166,20 +165,6 @@ MonoBehaviour:
     m_Bits: 64
   attackpower: 40
   attackrate: 2
---- !u!114 &2217671431638910993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1634154670389405907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 032380ce3b93e9a4881766c82c86b935, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxhealth: 1000
-  _animator: {fileID: 1634154670389405913}
 --- !u!1 &4351386919760854512
 GameObject:
   m_ObjectHideFlags: 0

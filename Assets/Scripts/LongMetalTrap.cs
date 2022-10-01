@@ -27,7 +27,7 @@ public class LongMetalTrap : MonoBehaviour
         foreach (Collider2D enemy in hitenemies)
         {
 
-            enemy.GetComponent<Enemy>().takedamage(attackpower);
+            enemy.GetComponent<PlayerDie>().takedamage(attackpower);
         }
     }
 }

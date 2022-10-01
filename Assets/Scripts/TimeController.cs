@@ -19,7 +19,7 @@ public class TimeController : MonoBehaviour
     private void Awake()
     {
         LoadData();
-        acumulador = (min * 60) + seg;
+        //acumulador = (min * 60) + seg;
         activo = true;
     }
 
@@ -55,7 +55,6 @@ public class TimeController : MonoBehaviour
     {
         PlayerPrefs.SetInt(MinPrefebsName, minu);
         PlayerPrefs.SetInt(SegPrefebsName, segu);
-        PlayerPrefs.DeleteAll();
     }
 
     private void LoadData()
