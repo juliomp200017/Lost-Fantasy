@@ -24,4 +24,4 @@ El juego está ambientado en la época medieval, nuestro personaje es un mercena
 ![image](https://user-images.githubusercontent.com/88041591/193432615-41164bec-cbdf-4911-b679-cdbc52ac9b2f.png)
 
 # Video
-https://drive.google.com/file/d/1ceoX1RFqx9TD5DDRYreKkrfcl-ohf791/view?usp=sharing
+https://drive.google.com/file/d/1cTy41Yy55JwqFoIoXF1R_tqB6DOtCPBS/view?usp=sharing
